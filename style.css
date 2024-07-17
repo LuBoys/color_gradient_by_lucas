@@ -1,0 +1,17 @@
+.gradient-follower {
+    position: relative;
+    height: 100vh; /* ou une autre hauteur souhaitée */
+    background: black;
+    overflow: hidden;
+  }
+  
+  .gradient-follower::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(circle farthest-side at var(--x, 50%) var(--y, 50%), #9548e2 0%, transparent 100%);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  
